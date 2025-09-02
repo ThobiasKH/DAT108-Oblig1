@@ -42,7 +42,7 @@ public class Oppg3 {
 
         // d 
         ansatte.stream()
-            .filter(a -> a.stilling.toLowerCase().contains("ceo"))
+            .filter(a -> a.stilling.toLowerCase().contains("ceo")) // utenlandsk firma :/
             .forEach(a -> a.aarslonn = (int)(a.aarslonn * 1.07));
         System.out.println("Lønn etter sjef-økning: ");
         skrivUtAlleAnsatte(ansatte);

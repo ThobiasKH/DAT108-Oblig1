@@ -35,9 +35,14 @@ public class Oppg2 {
         lonnsoppgjor(ansatte, a -> a.aarslonn < 500000 ? a.aarslonn + 1 : a.aarslonn);
         skrivUtAlleAnsatte(ansatte);
 
-        // iii
+        // iiib
         System.out.println("Ansatte etter prosentøkning for alle under 500,000:");
         lonnsoppgjor(ansatte, a -> a.aarslonn < 500000 ? (int)(a.aarslonn * 1.01) : a.aarslonn);
+        skrivUtAlleAnsatte(ansatte);
+
+        // iv 
+        System.out.println("Ansatte etter patriarkiet gjør sitt arbeid:");
+        lonnsoppgjor(ansatte, a -> a.kjonn == Kjonn.MANN ? (int) (a.aarslonn * 1.69) : Integer.MIN_VALUE );
         skrivUtAlleAnsatte(ansatte);
     }
 
